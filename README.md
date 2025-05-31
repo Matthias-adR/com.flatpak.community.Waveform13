@@ -1,6 +1,7 @@
 ## Waveform 13 Free (Flatpak)
+_derived from https://github.com/flathub/com.tracktion.Waveform_
+
 **NOTE: This wrapper is not verified by, affiliated with, or supported by the Tracktion Software Corporation.**
-**The program is the free version and isn't activated!**
 
 Please note that due to lack of actual programming or coding knowledge outside of just messing around with files like these I cannot fix any bugs
 
