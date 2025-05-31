@@ -1,0 +1,80 @@
+id: com.flatpak.community.Waveform13
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk 
+tags:
+  - proprietary
+
+command: waveform13.sh
+
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=pulseaudio
+  - --share=network
+  - --device=all
+  - --env=VST3_PATH=/app/extensions/Plugins/vst3
+  - --env=LADSPA_PATH=/app/extensions/Plugins/ladspa
+  - --env=LD_LIBRARY_PATH=/app/usr/lib:/app/lib
+  - --filesystem=home/.lxvst:create
+  - --filesystem=home/.vst:create
+  - --filesystem=home/.vst3:create
+  - --filesystem=home/Tracktion
+  - --filesystem=xdg-config
+  - --filesystem=xdg-documents
+  - --filesystem=xdg-download
+  - --filesystem=xdg-music
+  - --filesystem=xdg-pictures
+  - --filesystem=xdg-run/pipewire-0
+  - --filesystem=xdg-videos
+  - --filesystem=/run/media
+  - --filesystem=/media 
+
+add-extensions:
+  org.freedesktop.LinuxAudio.Plugins:
+    directory: extensions/Plugins
+    version: '20.08'
+    add-ld-path: lib
+    merge-dirs: ladspa;vst3
+    subdirectories: true
+    no-autodownload: true
+
+modules:
+  - name: libusb
+    buildsystem: autotools
+    config-opts:
+      - --prefix=/app/usr
+      - --disable-udev
+    sources:
+      - type: archive
+        url: https://github.com/libusb/libusb/releases/download/v1.0.26/libusb-1.0.26.tar.bz2
+        sha256: 12ce7a61fc9854d1d2a1ffe095f7b5fac19ddba095c259e6067a46500381b5a5
+
+  - name: waveform13
+    buildsystem: simple
+    sources:
+      - type: file
+        url: https://cdn.tracktion.com/file/tracktiondownload/w13/13313/waveform13_13.3.13_amd64.deb
+        sha256: 845dac4579d7760490fa777f4eeb3ab72a31fefc43f19db744f11590ea633b5f
+
+      - type: script
+        dest-filename: waveform13.sh
+        commands:
+          - exec /app/usr/bin/Waveform13 "$@"
+
+    build-commands:
+      - ar x waveform13_13.3.13_amd64.deb
+      - tar -xzvf data.tar.gz
+      - mkdir -p ${FLATPAK_DEST}/usr/
+      - cp -r usr/* ${FLATPAK_DEST}/usr/
+      - install -Dm755 waveform13.sh ${FLATPAK_DEST}/bin/waveform13.sh
+
+    post-install:
+      - install -d /app/extensions/Plugins
+
+    cleanup:
+      - /usr/share/doc
+      - /usr/share/man
+      - /usr/lib/debug
+      - '*.la'
+      - '*.a'
