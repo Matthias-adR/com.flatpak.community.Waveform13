@@ -1,0 +1,6 @@
+[Flatpak Ref]
+Name=com.flatpak.community.Waveform13
+Branch=main
+Url=https://github.com/andrimattheu/com.flatpak.community.Waveform13
+Title=Waveform 13 Flatpak (Community Build)
+Is-Subject-To-Change=true
