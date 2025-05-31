@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>com.flatpak.community.Waveform13</id>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>Proprietary</project_license>
+    <name>Waveform 13</name>
+    <summary>Professional digital audio workstation (DAW).</summary>
+    <description>
+        <p>Waveform 13 is a powerful, cross-platform digital audio workstation from Tracktion, offering a comprehensive suite of tools for music production, recording, mixing, and mastering.</p>
+    </description>
+    <launchable type="desktop-id">com.flatpak.community.Waveform13.desktop</launchable>
+    <screenshots>
+    </screenshots>
+    <url type="homepage">https://www.tracktion.com/products/waveform-13</url>
+    <url type="bugtracker">https://github.com/andrimattheu/com.flatpak.community.Waveform13/issues</url>
+    <url type="donation">https://www.tracktion.com/shop/waveform-13</url>
+    <developer_name>Tracktion Corporation</developer_name>
+    <update_contact>andrimattheu@proton.me</update_contact> <releases>
+        <release version="13.3.13" date="2024-05-31">
+            <description>
+                <p>Initial Flatpak release of Waveform 13.3.13.</p>
+                <ul>
+                    <li>Fixed libusb loading issues.</li>
+                    <li>Bundled necessary dependencies.</li>
+                </ul>
+            </description>
+        </release>
+    </releases>
+    <content_rating type="oars-1.1" />
+</component>

@@ -50,6 +50,13 @@ modules:
         url: https://github.com/libusb/libusb/releases/download/v1.0.26/libusb-1.0.26.tar.bz2
         sha256: 12ce7a61fc9854d1d2a1ffe095f7b5fac19ddba095c259e6067a46500381b5a5
 
+  - name: imagemagick
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://imagemagick.org/archive/releases/ImageMagick-7.1.1-33.tar.xz
+        sha256: c021effec02d18df2e55fbbe68b10b95366c1869143b08d7e8e16f471a0ddea1
+
   - name: waveform13
     buildsystem: simple
     sources:
@@ -61,6 +68,8 @@ modules:
         dest-filename: waveform13.sh
         commands:
           - exec /app/usr/bin/Waveform13 "$@"
+      - type: file
+        path: com.flatpak.community.Waveform13.appdata.xml
 
     build-commands:
       - ar x waveform13_13.3.13_amd64.deb
@@ -71,6 +80,14 @@ modules:
 
     post-install:
       - install -d /app/extensions/Plugins
+      - install -Dm644 usr/share/applications/waveform13.desktop /app/share/applications/com.flatpak.community.Waveform13.desktop
+      - sed -i 's|Exec=.*|Exec=waveform13.sh|' /app/share/applications/com.flatpak.community.Waveform13.desktop
+      - sed -i 's|Icon=.*|Icon=com.flatpak.community.Waveform13|' /app/share/applications/com.flatpak.community.Waveform13.desktop
+      - sed -i 's|Categories=.*|Categories=AudioVideo;|' /app/share/applications/com.flatpak.community.Waveform13.desktop
+      - convert usr/share/pixmaps/waveform13.png -resize 512x512 waveform13_resized.png
+      - install -Dm644 waveform13_resized.png /app/share/icons/hicolor/512x512/apps/com.flatpak.community.Waveform13.png
+      - install -Dm644 ${FLATPAK_BUILDER_BUILDDIR}/com.flatpak.community.Waveform13.appdata.xml /app/share/metainfo/com.flatpak.community.Waveform13.appdata.xml
+
 
     cleanup:
       - /usr/share/doc
