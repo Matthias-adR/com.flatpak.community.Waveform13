@@ -15,7 +15,7 @@
     <url type="bugtracker">https://github.com/andrimattheu/com.flatpak.community.Waveform13/issues</url>
     <url type="donation">https://www.tracktion.com/shop/waveform-13</url>
     <developer_name>Tracktion Corporation</developer_name>
-    <update_contact>andrimattheu@proton.me</update_contact> <releases>
+    <update_contact>andrimatthew@proton.me</update_contact> <releases>
         <release version="13.3.13" date="2024-05-31">
             <description>
                 <p>Initial Flatpak release of Waveform 13.3.13.</p>
