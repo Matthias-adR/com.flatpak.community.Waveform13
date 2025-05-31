@@ -2,20 +2,62 @@
 <component type="desktop-application">
     <id>com.flatpak.community.Waveform13</id>
     <metadata_license>CC0-1.0</metadata_license>
-    <project_license>Proprietary</project_license>
+    <project_license>LicenseRef-proprietary=https://marketplace.tracktion.com/terms-of-use</project_license>
     <name>Waveform 13</name>
-    <summary>Professional digital audio workstation (DAW).</summary>
+    <summary>Digital audio workstation for all music creators</summary>
     <description>
-        <p>Waveform 13 is a powerful, cross-platform digital audio workstation from Tracktion, offering a comprehensive suite of tools for music production, recording, mixing, and mastering.</p>
+        <p>
+            The world's best, fully featured, completely unlimited free DAW for all music creators.
+        </p>
+        <p>
+            NOTE: This wrapper is not verified by, affiliated with, or supported
+            by Tracktion Software Corporation.
+        </p>
     </description>
+    <categories>
+        <category>Audio</category>
+        <category>AudioVideoEditing</category>
+    </categories>
+
+    <requires>
+        <display_length compare="ge">medium</display_length>
+        <control>keyboard</control>
+        <control>pointing</control>
+    </requires>
     <launchable type="desktop-id">com.flatpak.community.Waveform13.desktop</launchable>
     <screenshots>
+        <screenshot type="default">
+            <caption>Launcher</caption>
+            <image>https://assets.tracktion.com/img/products/w13free/w13-expansion-launcher.jpg</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>DJ Mix Tools</caption>
+            <image>https://assets.tracktion.com/img/products/w12free/w12-feature-dj-mix.jpg</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>Pro Video</caption>
+            <image>https://assets.tracktion.com/img/products/w12free/w12-feature-pro-video.jpg</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>Recording engineer</caption>
+            <image>https://assets.tracktion.com/img/products/w12free/w12-feature-recording-engineer.jpg</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>MIDI Producer</caption>
+            <image>https://assets.tracktion.com/img/products/w12free/w12-feature-midi-producer.jpg</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>Synth Pack</caption>
+            <image>https://assets.tracktion.com/img/products/w12free/w12-feature-synth-pack.jpg</image>
+        </screenshot>
     </screenshots>
-    <url type="homepage">https://www.tracktion.com/products/waveform-13</url>
+    <url type="homepage">https://www.tracktion.com/products/waveform-free</url>
     <url type="bugtracker">https://github.com/andrimattheu/com.flatpak.community.Waveform13/issues</url>
-    <url type="donation">https://www.tracktion.com/shop/waveform-13</url>
+    <url type="donation">https://merch.tracktion.com/en-eur/</url>
+    <url type="help">https://www.tracktion.com/training/manuals</url>
     <developer_name>Tracktion Corporation</developer_name>
-    <update_contact>andrimatthew@proton.me</update_contact> <releases>
+    <update_contact>andrimatthew@proton.me</update_contact>
+    <releases>
         <release version="13.3.13" date="2024-05-31">
             <description>
                 <p>Initial Flatpak release of Waveform 13.3.13.</p>
