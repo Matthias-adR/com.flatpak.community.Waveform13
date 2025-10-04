@@ -1,6 +1,7 @@
 ## Waveform 13 Free (Flatpak)
 _derived from https://github.com/flathub/com.tracktion.Waveform_
 
+## As of 2025-10-04, I cannot even update it anyway because the CDN for the v.13.5.8 for the Linux .deb doesn't even work at the moment :/
 **NOTE: This wrapper is not verified by, affiliated with, or supported by the Tracktion Software Corporation.**
 
 Please note that due to lack of actual programming or coding knowledge outside of just messing around with files like these I cannot fix any bugs
