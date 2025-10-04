@@ -44,12 +44,12 @@ I have no near future plans to update it - anyone is free to PR and try to!
     flatpak run com.flatpak.community.Waveform13
     ```
 
-### Updating to a New Version (if I ever update this lol):
+~~### Updating to a New Version (if I ever update this lol):~~
 
-This Flatpak bundle does **not** support automatic updates. When a new version is released:
+This Flatpak bundle does **not** support automatic updates. ~~When a new version is released:~~
 
-1.  Download the new `.flatpak` file from the latest release on this GitHub page.
-2.  Run the `flatpak install --user <new-version-file.flatpak>` command again. Flatpak will automatically handle the upgrade, replacing the old version with the new one.
+~~1.  Download the new `.flatpak` file from the latest release on this GitHub page.~~
+~~2.  Run the `flatpak install --user <new-version-file.flatpak>` command again. Flatpak will automatically handle the upgrade, replacing the old version with the new one.~~
 
 ### Important Notes:
 
