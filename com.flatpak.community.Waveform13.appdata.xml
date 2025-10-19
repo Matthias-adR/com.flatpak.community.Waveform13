@@ -56,14 +56,12 @@
     <url type="donation">https://merch.tracktion.com/en-eur/</url>
     <url type="help">https://www.tracktion.com/training/manuals</url>
     <developer_name>Tracktion Corporation</developer_name>
-    <update_contact>andrimatthew@proton.me</update_contact>
     <releases>
-        <release version="13.3.13" date="2024-05-31">
+        <release version="13.5.13" date="2025-10-19">
             <description>
-                <p>Initial Flatpak release of Waveform 13.3.13.</p>
+                <p>Initial Flatpak release of Waveform 13.5.13.</p>
                 <ul>
-                    <li>Fixed libusb loading issues.</li>
-                    <li>Bundled necessary dependencies.</li>
+                    <li>Initial.</li>
                 </ul>
             </description>
         </release>
